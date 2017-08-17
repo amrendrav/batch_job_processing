@@ -8,7 +8,7 @@ import org.springframework.batch.core.configuration.annotation.StepBuilderFactor
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import com.bulkprocess.bulkprocess.domain.MyEntity;
+import com.bulkprocess.bulkprocess.domain.CampaignTO;
 import com.bulkprocess.bulkprocess.step.ChunkReadAndWriteStep;
 
 @Configuration
@@ -18,13 +18,13 @@ public class BulkProcessing {
 	@Bean
 	Job bulkProcessJob(JobBuilderFactory jobBuilderFactory, StepBuilderFactory stepBuilderFactory, ChunkReadAndWriteStep campaignStep) throws Exception{
 		
-		Step step = stepBuilderFactory.get("file-db")
-				.<MyEntity, MyEntity>chunk(100)
-				.reader(campaignStep.fileReader(null))
-				.writer(campaignStep.jdbcWriter(null, null))
+		Step step = stepBuilderFactory.get("file->db")
+				.<CampaignTO, CampaignTO>chunk(1000)
+				.reader(campaignStep.fileReader())
+				.writer(campaignStep.jdbcWriter())
 				.build();
 
-		return jobBuilderFactory.get("etl")
+		return jobBuilderFactory.get("bulkprocess2")
 				.start(step)
 				.build();
 	}

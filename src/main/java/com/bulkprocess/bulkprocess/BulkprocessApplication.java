@@ -4,6 +4,10 @@ import java.io.File;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
+
+import javax.sql.DataSource;
 
 @SpringBootApplication
 public class BulkprocessApplication {
@@ -13,5 +17,10 @@ public class BulkprocessApplication {
 		System.setProperty("inputFile", "file://" + new File("/workspace/bulkprocess/src/main/resources/campaignFileList.csv").getAbsolutePath());
 		
 		SpringApplication.run(BulkprocessApplication.class, args);
+	}
+
+	@Bean
+	NamedParameterJdbcTemplate jdbcTemplate(DataSource dataSource) {
+		return new NamedParameterJdbcTemplate(dataSource);
 	}
 }

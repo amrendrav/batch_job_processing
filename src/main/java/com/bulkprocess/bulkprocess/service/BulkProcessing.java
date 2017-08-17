@@ -21,7 +21,12 @@ public class BulkProcessing {
 		Step step = stepBuilderFactory.get("file-db")
 				.<MyEntity, MyEntity>chunk(100)
 				.reader(campaignStep.fileReader(null))
-				.writer(writer)
+				.writer(campaignStep.jdbcWriter(null, null))
+				.build();
+
+		return jobBuilderFactory.get("etl")
+				.start(step)
+				.build();
 	}
 	
 

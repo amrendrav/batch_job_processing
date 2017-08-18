@@ -28,9 +28,6 @@ public class ChunkReadAndWriteStep {
 	@Autowired
 	DataSource datasource;
 	
-	@Autowired
-	NamedParameterJdbcTemplate namedParamJdbcTemplate;
-	
 	@Value("${inputFile}")
 	Resource inputFile;
 	
@@ -60,11 +57,11 @@ public class ChunkReadAndWriteStep {
 
 	private LineTokenizer createCampaignLineTokenizer() {
 		DelimitedLineTokenizer campaignLineTokenizer = new DelimitedLineTokenizer();
-		int[] requiredColumnPositions = {0,1};
+		int[] requiredColumnPositions = {0,1,9};
 		campaignLineTokenizer.setDelimiter("\t");
 		//campaignLineTokenizer.setNames(new String[]{"CustomerKey", "EmailAddress", "acct_mask", "ofc_nm", "first_nm", "last_nm", "export_date_today", "campaignname", "template_name", "contact_group", "access_cd", "client_id", "segment_cd", "start_dt", "end_dt", "dynamic1", "dynamic2"});
 		campaignLineTokenizer.setIncludedFields(requiredColumnPositions);
-		campaignLineTokenizer.setNames(new String[]{"key", "emailAddress"});
+		campaignLineTokenizer.setNames(new String[]{"CampaignKey", "EmailAddress", "contact_group"});
 		return campaignLineTokenizer;
 	}
 
@@ -77,7 +74,7 @@ public class ChunkReadAndWriteStep {
 	@Bean
 	public JdbcBatchItemWriter<CampaignTO> jdbcWriter() {
 		JdbcBatchItemWriter<CampaignTO> jdbcWriter = new JdbcBatchItemWriter<>();
-		jdbcWriter.setSql("insert into ACCT_OFFER_TEST(CR_USER_NM, CLNT_ID) values (:emailAddress, :key)");
+		jdbcWriter.setSql("insert into ACCT_OFFER_TEST(CR_USER_NM, CLNT_ID, ACCT_NBR) values (:EmailAddress, :CampaignKey, :contact_group)");
 		jdbcWriter.setDataSource(datasource);
 		jdbcWriter.setItemSqlParameterSourceProvider(new BeanPropertyItemSqlParameterSourceProvider<CampaignTO>());
 		//jdbcWriter.setJdbcTemplate(namedParamJdbcTemplate);

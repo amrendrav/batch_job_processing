@@ -18,10 +18,10 @@ import org.springframework.core.task.TaskExecutor;
 @EnableBatchProcessing
 public class BulkProcessing {
 
-	@Value("${chunk-size}")
+	@Value("${chunk.size}")
 	private int chunkSize;
 
-	@Value("${max-threads}")
+	@Value("${max.threads}")
 	private int maxThreads;
 	
 	@Bean
@@ -34,7 +34,7 @@ public class BulkProcessing {
 				.taskExecutor(taskExecutor())
 				.build();
 
-		return jobBuilderFactory.get("bulkprocess2")
+		return jobBuilderFactory.get("bulkprocess15")
 				.start(step)
 				.build();
 	}

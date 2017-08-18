@@ -1,4 +1,4 @@
-CampaignKey	EmailAddress1	key	ofc_nm	first_nm	last_nm	export_date_today	emailAddress	template_name	contact_group	access_cd	client_id	segment_cd	start_dt	end_dt	dynamic1	dynamic2
+CampaignKey	EmailAddress	acct_mask	ofc_nm	first_nm	last_nm	export_date_today	campaignname	template_name	contact_group	access_cd	client_id	segment_cd	start_dt	end_dt	dynamic1	dynamic2
 4031	WHEATRICK@GMAIL.COM	9436	TD AMERITRADE	Patrick	Mahoney	11AUG2017	20170815_Portfolio_Margin	20170815_trad_em_p1_portfolio_margin_q4_fy17	PKG38943	 	4033	 	 	 	 	 
 5554	STILLFLYER@AOL.COM	9124	TD AMERITRADE	Sandy	Stillman	11AUG2017	20170815_Portfolio_Margin	20170815_trad_em_p1_portfolio_margin_q4_fy17	PKG38943	 	5552	 	 	 	 	 
 6792	ELDRIDGE116@YAHOO.COM	1963	TD AMERITRADE	Yuwai	Chiu	11AUG2017	20170815_Portfolio_Margin	20170815_trad_em_p1_portfolio_margin_q4_fy17	PKG38931	 	6794	 	 	 	 	 

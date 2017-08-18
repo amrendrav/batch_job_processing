@@ -3,36 +3,45 @@ package com.bulkprocess.bulkprocess.domain;
 public class CampaignTO {
 	
 	
-	private Long key;
-	private String emailAddress;
+	private Long CampaignKey;
+	private String EmailAddress;
+	private String contact_group;
 	
 	public CampaignTO(){
 		
 	}
-
-	public CampaignTO(Long key, String emailAddress) {
+	
+	public CampaignTO(Long campaignKey, String emailAddress, String contact_group) {
 		super();
-		this.key = key;
-		this.emailAddress = emailAddress;
+		CampaignKey = campaignKey;
+		EmailAddress = emailAddress;
+		this.contact_group = contact_group;
 	}
 
-	public Long getKey() {
-		return key;
+	public Long getCampaignKey() {
+		return CampaignKey;
 	}
 
-	public void setKey(Long key) {
-		this.key = key;
+	public void setCampaignKey(Long campaignKey) {
+		CampaignKey = campaignKey;
 	}
 
 	public String getEmailAddress() {
-		return emailAddress;
+		return EmailAddress;
 	}
 
 	public void setEmailAddress(String emailAddress) {
-		this.emailAddress = emailAddress;
+		EmailAddress = emailAddress;
+	}
+
+	public String getContact_group() {
+		return contact_group;
+	}
+
+	public void setContact_group(String contact_group) {
+		this.contact_group = contact_group;
 	}
 	
-
 	
-
+	
 }

@@ -16,6 +16,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 
@@ -27,14 +28,15 @@ public class ChunkReadAndWriteStep {
 	
 	@Autowired
 	DataSource datasource;
-	
-	@Value("${inputFile}")
-	Resource inputFile;
+
+	@Value("${input.file}")
+	String inputFile;
 	
 	@Bean
 	public FlatFileItemReader<CampaignTO> fileReader(){
 		FlatFileItemReader<CampaignTO> csvFileReader = new FlatFileItemReader<>();
-		csvFileReader.setResource(inputFile);
+//
+		csvFileReader.setResource(new ClassPathResource(inputFile));
         csvFileReader.setLinesToSkip(1);
         
        LineMapper<CampaignTO> campaignLineMapper = campaignLineMapper();

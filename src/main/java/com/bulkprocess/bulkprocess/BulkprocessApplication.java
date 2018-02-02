@@ -15,7 +15,7 @@ public class BulkprocessApplication {
 
 	public static void main(String[] args) {
 		
-		System.setProperty("inputFile", "file:///" + new File("C:/workspace/bulkprocess/src/main/resources/epsilon.txt").getAbsolutePath());
+		//System.setProperty("inputFile", "file:///" + new File("/src/main/resources/epsilon.txt").getPath());
 
 		long time = System.currentTimeMillis();
 		

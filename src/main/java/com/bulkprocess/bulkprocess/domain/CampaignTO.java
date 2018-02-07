@@ -41,7 +41,13 @@ public class CampaignTO {
 	public void setContact_group(String contact_group) {
 		this.contact_group = contact_group;
 	}
-	
-	
-	
+
+	@Override
+	public String toString() {
+		return "CampaignTO{" +
+				"CampaignKey=" + CampaignKey +
+				", EmailAddress='" + EmailAddress + '\'' +
+				", contact_group='" + contact_group + '\'' +
+				'}';
+	}
 }

@@ -22,6 +22,7 @@ import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 
 import com.bulkprocess.bulkprocess.domain.OfferAccountEntity;
 import com.bulkprocess.bulkprocess.domain.CampaignTO;
+import org.springframework.stereotype.Component;
 
 @Configuration
 public class ChunkReadAndWriteStep {
@@ -73,6 +74,7 @@ public class ChunkReadAndWriteStep {
 		return campaignInformationMapper;
 	}
 
+
 	@Bean
 	public JdbcBatchItemWriter<CampaignTO> jdbcWriter() {
 		JdbcBatchItemWriter<CampaignTO> jdbcWriter = new JdbcBatchItemWriter<>();
@@ -82,12 +84,15 @@ public class ChunkReadAndWriteStep {
 		//jdbcWriter.setJdbcTemplate(namedParamJdbcTemplate);
 		
 
-		/*ItemSqlParameterSourceProvider<CampaignTO> paramProvider = new BeanPropertyItemSqlParameterSourceProvider<>();
+
+/*ItemSqlParameterSourceProvider<CampaignTO> paramProvider = new BeanPropertyItemSqlParameterSourceProvider<>();
 		jdbcWriter.setItemSqlParameterSourceProvider(paramProvider);
 */
+
 		return jdbcWriter;
 
 	}
+
 
 
 

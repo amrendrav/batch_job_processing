@@ -4,29 +4,23 @@ import java.io.File;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.scheduling.annotation.EnableScheduling;
 
 @SpringBootApplication
+@EnableBatchProcessing
+@EnableScheduling
 public class BulkprocessApplication {
 
 	public final static Logger logger = LoggerFactory.getLogger(BulkprocessApplication.class);
 
 	public static void main(String[] args) {
 		
-		//System.setProperty("inputFile", "file:///" + new File("/src/main/resources/epsilon.txt").getPath());
 
-		long time = System.currentTimeMillis();
-		
 		SpringApplication.run(BulkprocessApplication.class, args);
-
-		time = System.currentTimeMillis() - time;
-		logger.info("Runtime: {} seconds.", ((double)time/1000));
 	}
 
-	/*@Bean
-	NamedParameterJdbcTemplate jdbcTemplate(DataSource dataSource) {
-		return new NamedParameterJdbcTemplate(dataSource);
-	}*/
 }

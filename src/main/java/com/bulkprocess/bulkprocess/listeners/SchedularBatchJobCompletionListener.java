@@ -1,21 +1,22 @@
 package com.bulkprocess.bulkprocess.listeners;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.batch.core.BatchStatus;
 import org.springframework.batch.core.JobExecution;
 import org.springframework.batch.core.listener.JobExecutionListenerSupport;
 
 /**
- * This class extends JobExecutionListenerSupport and continuously listen the application change and 
- * prints the message once completed.
- * @author Ashish Mondal
- *
+ * @author Amrendra Vimal
  */
-public class BatchJobCompletionListener extends JobExecutionListenerSupport {
+
+public class SchedularBatchJobCompletionListener extends JobExecutionListenerSupport {
+	public final static Logger logger = LoggerFactory.getLogger(SchedularBatchJobCompletionListener.class);
 
 	@Override
 	public void afterJob(JobExecution jobExecution) {
 		if (jobExecution.getStatus() == BatchStatus.COMPLETED) {
-			System.out.println("BATCH JOB COMPLETED SUCCESSFULLY");
+			logger.info("BATCH JOB COMPLETED SUCCESSFULLY");
 		}
 	}
 

@@ -1,15 +1,17 @@
-package com.bulkprocess.bulkprocess.step;
+package com.bulkprocess.bulkprocess.readers;
 
 import org.springframework.batch.item.ItemReader;
 import org.springframework.batch.item.NonTransientResourceException;
 import org.springframework.batch.item.ParseException;
 import org.springframework.batch.item.UnexpectedInputException;
 
-public class BatchItemReader implements ItemReader<String> {
+/**
+ * @author Amrendra Vimal
+ */
 
-	private String[] messages = { "Hello World",
-			"Welcome to Spring Batch using Spring boot Example",
-			"H2 Database has been used in this example" };
+public class ScheduledBatchJobItemReader implements ItemReader<String> {
+
+	private String[] messages = { "Hi there - This message is printed through Schedular batchJob execution." };
 
 	private int count = 0;
 

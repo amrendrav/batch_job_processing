@@ -1,17 +1,21 @@
-package com.bulkprocess.bulkprocess.domain;
+package com.bulkprocess.bulkprocess.pojo;
 
-public class CampaignTO {
+/**
+ * @author Amrendra Vimal
+ */
+
+public class ReadAndWritePojo {
 	
 	
 	private Long CampaignKey;
 	private String EmailAddress;
 	private String contact_group;
 	
-	public CampaignTO(){
+	public ReadAndWritePojo(){
 		
 	}
 	
-	public CampaignTO(Long campaignKey, String emailAddress, String contact_group) {
+	public ReadAndWritePojo(Long campaignKey, String emailAddress, String contact_group) {
 		super();
 		CampaignKey = campaignKey;
 		EmailAddress = emailAddress;
@@ -41,7 +45,13 @@ public class CampaignTO {
 	public void setContact_group(String contact_group) {
 		this.contact_group = contact_group;
 	}
-	
-	
-	
+
+	@Override
+	public String toString() {
+		return "ReadAndWritePojo{" +
+				"CampaignKey=" + CampaignKey +
+				", EmailAddress='" + EmailAddress + '\'' +
+				", contact_group='" + contact_group + '\'' +
+				'}';
+	}
 }

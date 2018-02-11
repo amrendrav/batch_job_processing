@@ -41,10 +41,10 @@ public class FileReadAndDBWriteBatchJobConfig {
     private StepBuilderFactory stepBuilderFactory;
 
     @Autowired
-	InputFileWriterConfiguration writerConfiguration;
+	private InputFileWriterConfiguration writerConfiguration;
 
     @Autowired
-    DataSource datasource;
+    private DataSource datasource;
 
     @Value("${input.file}")
     String inputFile;

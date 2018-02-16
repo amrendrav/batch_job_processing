@@ -34,4 +34,14 @@ public class RestControllerForBatchJob {
 		return "File processing Job completed";
 	}
 
+    @GetMapping(path = "/startDBProcessing", headers = "Accept=application/json", produces = "application/json")
+    public String startDbReadingAndWritingJob() throws Exception {
+
+        JobParameters jobParameters = new JobParametersBuilder().addLong(
+                "time", System.currentTimeMillis()).toJobParameters();
+        jobLauncher.run((Job)applicationContext.getBean("inputFromDatabaseProcessJob"), jobParameters);
+
+        return "Reading and Writing completed";
+    }
+
 }

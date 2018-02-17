@@ -14,15 +14,21 @@ import org.springframework.web.bind.annotation.RestController;
  * @author Amrendra Vimal
  */
 
+
+/**
+ * I ahd exposed two of the batch jobs as a service
+ * 1. inputFileProcessJob - reads from a file and put it into database.
+ * 2. inputFromDatabaseProcessJob - reads from database and dumps the data into another db table.
+ */
 @RestController
 @RequestMapping("/batchJob")
 public class RestControllerForBatchJob {
 
     @Autowired
-    JobLauncher jobLauncher;
+    private JobLauncher jobLauncher;
 
 	@Autowired
-    ApplicationContext applicationContext;
+    private ApplicationContext applicationContext;
 
 	@GetMapping(path = "/startFileProcessing", headers = "Accept=application/json", produces = "application/json")
 	public String startJob() throws Exception {

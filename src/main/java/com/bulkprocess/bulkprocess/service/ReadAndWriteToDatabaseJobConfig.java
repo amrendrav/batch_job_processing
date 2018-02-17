@@ -16,6 +16,10 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.core.task.SimpleAsyncTaskExecutor;
 import org.springframework.core.task.TaskExecutor;
 
+/**
+ * @author Amrendra Vimal
+ */
+
 @Configuration
 public class ReadAndWriteToDatabaseJobConfig {
 

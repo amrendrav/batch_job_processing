@@ -6,6 +6,9 @@ import org.springframework.jdbc.core.RowMapper;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+/**
+ * @author Amrendra Vimal
+ */
 public class RAndWFromDBPOJORowMapper implements RowMapper<RAndWFromDBPOJO>{
 
     @Override

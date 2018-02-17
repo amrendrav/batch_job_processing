@@ -1,5 +1,9 @@
 package com.bulkprocess.bulkprocess.pojo;
 
+/**
+ * @author Amrendra Vimal
+ */
+
 public class RAndWFromDBPOJO {
 
     private final int id;

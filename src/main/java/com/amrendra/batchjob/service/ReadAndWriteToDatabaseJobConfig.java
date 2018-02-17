@@ -41,7 +41,7 @@ public class ReadAndWriteToDatabaseJobConfig {
     private InputDataBaseReaderAndWriter readerAndWriterConfiguration;
 
     @Bean
-    public Job inputFromDatabaseProcessJob() throws Exception{
+    public Job inputFromDatabaseProcessJob() throws Exception {
         logger.info("Inside input file job processing");
 
         return jobBuilderFactory.get("inputFromDatabaseProcessJob")
@@ -51,7 +51,7 @@ public class ReadAndWriteToDatabaseJobConfig {
     }
 
     @Bean
-    public Step dbReadAndWriteProcessStep(){
+    public Step dbReadAndWriteProcessStep() {
 
         return stepBuilderFactory.get("dbReadAndWriteProcessStep")
                 .<RAndWFromDBPOJO, RAndWFromDBPOJO>chunk(chunkSizeForDBRR)

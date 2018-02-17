@@ -45,7 +45,6 @@ public class InputFIleItemReader {
         DelimitedLineTokenizer campaignLineTokenizer = new DelimitedLineTokenizer();
         int[] requiredColumnPositions = {0,1,9};
         campaignLineTokenizer.setDelimiter("\t");
-        //campaignLineTokenizer.setNames(new String[]{"CustomerKey", "EmailAddress", "acct_mask", "ofc_nm", "first_nm", "last_nm", "export_date_today", "campaignname", "template_name", "contact_group", "access_cd", "client_id", "segment_cd", "start_dt", "end_dt", "dynamic1", "dynamic2"});
         campaignLineTokenizer.setIncludedFields(requiredColumnPositions);
         campaignLineTokenizer.setNames(new String[]{"CampaignKey", "EmailAddress", "contact_group"});
         return campaignLineTokenizer;

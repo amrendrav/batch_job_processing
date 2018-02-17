@@ -29,7 +29,7 @@ public class SchedularBatchJobConfig {
     public final static Logger logger = LoggerFactory.getLogger(SchedularBatchJobConfig.class);
 
     @Autowired
-    ApplicationContext applicationContext;
+    private ApplicationContext applicationContext;
     @Autowired
     private JobBuilderFactory jobBuilderFactory;
     @Autowired
@@ -41,13 +41,13 @@ public class SchedularBatchJobConfig {
     @Scheduled(cron = "${my.cron}")
     public void printMessage() {
         try {
-            logger.info("I am starting from Schedular");
+            logger.info("Starting schedular job");
 
             JobParameters jobParameters = new JobParametersBuilder().addLong(
                     "time", System.currentTimeMillis()).toJobParameters();
             jobLauncher.run((Job)applicationContext.getBean("processJob"), jobParameters);
 
-            logger.info("I am exiting Scheduled Job");
+            logger.info("Schedular job processed");
         } catch (Exception e) {
             e.printStackTrace();
         }

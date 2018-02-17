@@ -16,8 +16,7 @@ public class ScheduledBatchJobItemReader implements ItemReader<String> {
 	private int count = 0;
 
 //	@Override
-	public String read() throws Exception, UnexpectedInputException,
-            ParseException, NonTransientResourceException {
+	public String read(){
 
 		if (count < messages.length) {
 			return messages[count++];

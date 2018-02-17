@@ -1,6 +1,6 @@
-package com.bulkprocess.bulkprocess.readers;
+package com.amrendra.batchjob.readers;
 
-import com.bulkprocess.bulkprocess.pojo.RAndWFromDBPOJO;
+import com.amrendra.batchjob.pojo.RAndWFromDBPOJO;
 import org.springframework.batch.item.database.*;
 import org.springframework.batch.item.database.support.MySqlPagingQueryProvider;
 import org.springframework.beans.factory.annotation.Autowired;

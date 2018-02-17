@@ -1,4 +1,4 @@
-package com.bulkprocess.bulkprocess.listeners;
+package com.amrendra.batchjob.listeners;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

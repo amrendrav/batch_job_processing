@@ -1,6 +1,6 @@
-package com.bulkprocess.bulkprocess.readers;
+package com.amrendra.batchjob.readers;
 
-import com.bulkprocess.bulkprocess.pojo.RAndWFromDBPOJO;
+import com.amrendra.batchjob.pojo.RAndWFromDBPOJO;
 import org.springframework.jdbc.core.RowMapper;
 
 import java.sql.ResultSet;

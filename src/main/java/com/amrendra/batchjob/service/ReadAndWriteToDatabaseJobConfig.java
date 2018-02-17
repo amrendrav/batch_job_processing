@@ -1,7 +1,7 @@
-package com.bulkprocess.bulkprocess.service;
+package com.amrendra.batchjob.service;
 
-import com.bulkprocess.bulkprocess.pojo.RAndWFromDBPOJO;
-import com.bulkprocess.bulkprocess.readers.InputDataBaseReaderAndWriter;
+import com.amrendra.batchjob.readers.InputDataBaseReaderAndWriter;
+import com.amrendra.batchjob.pojo.RAndWFromDBPOJO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.batch.core.Job;

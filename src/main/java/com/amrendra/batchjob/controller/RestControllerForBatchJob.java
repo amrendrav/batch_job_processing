@@ -1,4 +1,4 @@
-package com.bulkprocess.bulkprocess.controller;
+package com.amrendra.batchjob.controller;
 
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.JobParameters;

@@ -1,6 +1,6 @@
-package com.bulkprocess.bulkprocess.writers;
+package com.amrendra.batchjob.writers;
 
-import com.bulkprocess.bulkprocess.pojo.ReadAndWritePojo;
+import com.amrendra.batchjob.pojo.ReadAndWritePojo;
 import org.springframework.batch.item.database.BeanPropertyItemSqlParameterSourceProvider;
 import org.springframework.batch.item.database.JdbcBatchItemWriter;
 import org.springframework.beans.factory.annotation.Autowired;

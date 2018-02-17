@@ -1,4 +1,4 @@
-package com.bulkprocess.bulkprocess.domain;
+package com.amrendra.batchjob.domain;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;

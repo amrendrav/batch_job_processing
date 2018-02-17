@@ -1,4 +1,4 @@
-package com.bulkprocess.bulkprocess.processors;
+package com.amrendra.batchjob.processors;
 
 import org.springframework.batch.item.ItemProcessor;
 

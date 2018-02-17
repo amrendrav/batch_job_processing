@@ -1,9 +1,9 @@
-package com.bulkprocess.bulkprocess.service;
+package com.amrendra.batchjob.service;
 
-import com.bulkprocess.bulkprocess.listeners.SchedularBatchJobCompletionListener;
-import com.bulkprocess.bulkprocess.processors.ScheduledBatchJobItemProcessor;
-import com.bulkprocess.bulkprocess.readers.ScheduledBatchJobItemReader;
-import com.bulkprocess.bulkprocess.writers.ScheduledBatchJobItemWriter;
+import com.amrendra.batchjob.listeners.SchedularBatchJobCompletionListener;
+import com.amrendra.batchjob.processors.ScheduledBatchJobItemProcessor;
+import com.amrendra.batchjob.readers.ScheduledBatchJobItemReader;
+import com.amrendra.batchjob.writers.ScheduledBatchJobItemWriter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.batch.core.*;

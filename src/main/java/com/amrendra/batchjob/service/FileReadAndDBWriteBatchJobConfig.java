@@ -1,8 +1,8 @@
-package com.bulkprocess.bulkprocess.service;
+package com.amrendra.batchjob.service;
 
-import com.bulkprocess.bulkprocess.pojo.ReadAndWritePojo;
-import com.bulkprocess.bulkprocess.readers.InputFIleItemReader;
-import com.bulkprocess.bulkprocess.writers.InputFileWriterConfiguration;
+import com.amrendra.batchjob.readers.InputFIleItemReader;
+import com.amrendra.batchjob.pojo.ReadAndWritePojo;
+import com.amrendra.batchjob.writers.InputFileWriterConfiguration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.batch.core.Job;

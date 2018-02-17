@@ -1,4 +1,4 @@
-package com.bulkprocess.bulkprocess.writers;
+package com.amrendra.batchjob.writers;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

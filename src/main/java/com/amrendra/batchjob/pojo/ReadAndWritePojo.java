@@ -1,4 +1,4 @@
-package com.bulkprocess.bulkprocess.pojo;
+package com.amrendra.batchjob.pojo;
 
 /**
  * @author Amrendra Vimal

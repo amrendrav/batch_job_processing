@@ -1,4 +1,4 @@
-package com.bulkprocess.bulkprocess.readers;
+package com.amrendra.batchjob.readers;
 
 import org.springframework.batch.item.ItemReader;
 import org.springframework.batch.item.NonTransientResourceException;

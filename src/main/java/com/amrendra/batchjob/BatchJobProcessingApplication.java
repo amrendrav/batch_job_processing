@@ -1,4 +1,4 @@
-package com.bulkprocess.bulkprocess;
+package com.amrendra.batchjob;
 
 import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
 import org.springframework.boot.SpringApplication;

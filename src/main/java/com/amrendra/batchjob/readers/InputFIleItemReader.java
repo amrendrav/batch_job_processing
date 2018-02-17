@@ -1,6 +1,6 @@
-package com.bulkprocess.bulkprocess.readers;
+package com.amrendra.batchjob.readers;
 
-import com.bulkprocess.bulkprocess.pojo.ReadAndWritePojo;
+import com.amrendra.batchjob.pojo.ReadAndWritePojo;
 import org.springframework.batch.item.file.FlatFileItemReader;
 import org.springframework.batch.item.file.LineMapper;
 import org.springframework.batch.item.file.mapping.DefaultLineMapper;

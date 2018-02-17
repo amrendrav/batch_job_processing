@@ -1,4 +1,4 @@
-package com.bulkprocess.bulkprocess;
+package com.amrendra.batchjob;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

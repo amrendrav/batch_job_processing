@@ -50,4 +50,15 @@ public class RestControllerForBatchJob {
         return "Reading and Writing completed";
     }
 
+
+    @GetMapping(path = "/deleteJob", headers = "Accept=application/json", produces = "application/json")
+    public String startDbReadingAndDeleteJob() throws Exception {
+
+        JobParameters jobParameters = new JobParametersBuilder().addLong(
+                "time", System.currentTimeMillis()).toJobParameters();
+        jobLauncher.run((Job)applicationContext.getBean("inputDeleteDataJob"), jobParameters);
+
+        return "Reading andDeleting completed";
+    }
+
 }

@@ -1,0 +1,5 @@
+statuses:
+  clientOfferStatuses:
+    Invited: 1
+    Pending: 2
+    Removed: 3

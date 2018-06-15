@@ -16,9 +16,9 @@ import java.util.List;
 @Configuration
 public class BookJdbcItemWriter {
 
-    private static final String DELETE_BOOK = "delete from delete_test where id = 1";
+    /*private static final String DELETE_BOOK = "delete from delete_test where id = ?";
 
-   /* private JdbcTemplate jdbcTemplate;
+   *//* private JdbcTemplate jdbcTemplate;
 
     public BookJdbcItemWriter(DataSource dataSource) {
         this.jdbcTemplate = new JdbcTemplate(dataSource);
@@ -28,7 +28,7 @@ public class BookJdbcItemWriter {
         for(DeleteTest item : items) {
             int updated = jdbcTemplate.update(DELETE_BOOK,item.getId());
         }
-    }*/
+    }*//*
 
     @Autowired
     DataSource datasource;
@@ -42,5 +42,5 @@ public class BookJdbcItemWriter {
 
         return jdbcWriter;
 
-    }
+    }*/
 }

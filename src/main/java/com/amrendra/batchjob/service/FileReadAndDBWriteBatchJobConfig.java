@@ -16,6 +16,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.task.SimpleAsyncTaskExecutor;
 import org.springframework.core.task.TaskExecutor;
+import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 
 import javax.sql.DataSource;
 
@@ -73,9 +74,11 @@ public class FileReadAndDBWriteBatchJobConfig {
 
 	@Bean
 	public TaskExecutor taskExecutor() {
-		SimpleAsyncTaskExecutor taskExecutor = new SimpleAsyncTaskExecutor();
-		taskExecutor.setConcurrencyLimit(maxThreads);
-		return taskExecutor;
+		ThreadPoolTaskExecutor threadPoolTaskExecutor = new ThreadPoolTaskExecutor();
+		threadPoolTaskExecutor.setMaxPoolSize(maxThreads);
+		//SimpleAsyncTaskExecutor taskExecutor = new SimpleAsyncTaskExecutor();
+		//taskExecutor.setConcurrencyLimit(maxThreads);
+		return threadPoolTaskExecutor;
 	}
 
 }

@@ -26,7 +26,7 @@ import javax.sql.DataSource;
 public class ReadAndDelete {
 
 
-        public final static Logger logger = LoggerFactory.getLogger(com.amrendra.batchjob.service.ReadAndDelete.class);
+       /* public final static Logger logger = LoggerFactory.getLogger(com.amrendra.batchjob.service.ReadAndDelete.class);
 
         @Value("${chunk.size}")
         private int chunkSize;
@@ -78,7 +78,7 @@ logger.info("Something");
             SimpleAsyncTaskExecutor taskExecutor = new SimpleAsyncTaskExecutor();
             taskExecutor.setConcurrencyLimit(maxThreads);
             return taskExecutor;
-        }
+        }*/
 
     }
 
